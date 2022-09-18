@@ -28,6 +28,7 @@ const Welcome = () => {
           clicked={() => {
             navigate("/resident");
           }}
+          resident={true}
         ></CustomButton>
       </div>
     );

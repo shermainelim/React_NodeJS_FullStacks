@@ -1,0 +1,25 @@
+.resident-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .description {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .input-box {
+    margin-bottom: 20px;
+  }
+
+  .queue-container {
+    text-align: center;
+
+    .queue-data {
+      text-align: left;
+      margin-left: 30px;
+    }
+  }
+}

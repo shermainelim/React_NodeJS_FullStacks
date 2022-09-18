@@ -49,6 +49,7 @@ const StaffVoucherAck = () => {
         <b>Completed:</b> {completedIndicator}
       </div>
       <CustomButton
+        className="btn"
         content="New Entry"
         clicked={logoutVoucherHandler}
       ></CustomButton>

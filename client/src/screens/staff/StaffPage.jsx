@@ -72,6 +72,7 @@ const StaffPage = () => {
 
         {!residentQueueData?.[4] ? null : (
           <CustomButton
+            className="btn"
             content="Issue Voucher"
             clicked={voucherHandler}
           ></CustomButton>
@@ -158,10 +159,15 @@ const StaffPage = () => {
       </div>
 
       <CustomButton
+        className="btn"
         content="Check Queue Number and Resident"
         clicked={buttonHandler}
       ></CustomButton>
-      <CustomButton content="Logout" clicked={logoutHandler}></CustomButton>
+      <CustomButton
+        className="btn"
+        content="Logout"
+        clicked={logoutHandler}
+      ></CustomButton>
       {isStaffChecked && renderQueueDetails()}
     </div>
   );

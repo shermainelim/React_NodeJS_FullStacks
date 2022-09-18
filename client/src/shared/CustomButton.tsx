@@ -3,18 +3,28 @@ import classNames from "classnames/bind";
 import styles from "./CustomButton.scss";
 
 interface Props {
+  testId?: string;
   content: string;
   clicked: () => void;
-  resident?: boolean;
+  // resident?: boolean;
+  // staff?:boolean;
+  className: string;
 }
 
-const CustomButton: React.FC<Props> = ({ content, clicked, resident }) => {
+const CustomButton: React.FC<Props> = ({
+  testId,
+  content,
+  clicked,
+  // resident,
+  // staff,
+  className,
+}) => {
   const cx = classNames.bind(styles);
 
   return (
     <button
-      data-testid="custom-btn"
-      className={resident ? cx("another-btn") : cx("btn")}
+      data-testid={`custom-btn-${testId}`}
+      className={cx(className)}
       onClick={clicked}
     >
       {content}

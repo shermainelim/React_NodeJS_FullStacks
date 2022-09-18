@@ -42,6 +42,7 @@ const Login = ({ staff }) => {
 
       {staff ? (
         <CustomButton
+          className="btn"
           content="Login"
           clicked={async () => {
             dispatch(login({ username, password }));
@@ -51,6 +52,7 @@ const Login = ({ staff }) => {
         </CustomButton>
       ) : (
         <CustomButton
+          className="btn"
           content="Login"
           clicked={async () => {
             dispatch(loginAdmin({ username, password }));

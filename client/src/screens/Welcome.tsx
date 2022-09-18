@@ -24,11 +24,14 @@ const Welcome = () => {
           alt="Logo"
         />
         <CustomButton
+          className="resident-btn"
+          testId="resident"
           content="Residents"
           clicked={() => {
             navigate("/resident");
           }}
-          resident={true}
+
+          // resident={true}
         ></CustomButton>
       </div>
     );
@@ -39,10 +42,13 @@ const Welcome = () => {
       <div className={cx("welcome-category")}>
         <img className={cx("logo")} src={staffLogo} alt="Logo" />
         <CustomButton
+          className="staff-btn"
           content="General Staffs"
           clicked={() => {
             navigate("/staff");
           }}
+
+          // staff={true}
         ></CustomButton>
       </div>
     );
@@ -53,6 +59,7 @@ const Welcome = () => {
       <div className={cx("welcome-category")}>
         <img className={cx("logo")} src={adminLogo} alt="Logo" />
         <CustomButton
+          className="btn"
           content="Admin"
           clicked={() => {
             navigate("/adminLogin");

@@ -125,6 +125,7 @@ const AdminPage = () => {
             </div>
           ) : null}
           <CustomButton
+            className="btn"
             content="Register Staff"
             clicked={async () => {
               setFormSubmitted(true);
@@ -140,7 +141,11 @@ const AdminPage = () => {
             }}
           ></CustomButton>
 
-          <CustomButton content="Logout" clicked={logoutHandler}></CustomButton>
+          <CustomButton
+            className="btn"
+            content="Logout"
+            clicked={logoutHandler}
+          ></CustomButton>
         </div>
       </div>
     </div>

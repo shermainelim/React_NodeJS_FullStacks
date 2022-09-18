@@ -9,8 +9,19 @@
   border-radius: 20px;
 }
 
-.another-btn {
-  background-color: teal;
+.resident-btn {
+  background-color: teal !important;
+  padding: 1rem 2rem;
+  font-size: 18px;
+  border: none;
+  color: #fff;
+  margin: 1rem;
+  outline: none;
+  border-radius: 20px;
+}
+
+.staff-btn {
+  background-color: #0a75ad !important;
   padding: 1rem 2rem;
   font-size: 18px;
   border: none;

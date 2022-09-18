@@ -45,7 +45,11 @@ const ResidentPage = () => {
           <b>Queue No:</b> {queueNumberCreated}
         </div>
       </div>
-      <CustomButton content="Logout" clicked={logoutHandler}></CustomButton>
+      <CustomButton
+        className="btn"
+        content="Logout"
+        clicked={logoutHandler}
+      ></CustomButton>
     </div>
   );
 };

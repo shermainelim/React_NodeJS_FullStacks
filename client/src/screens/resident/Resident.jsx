@@ -83,6 +83,7 @@ const Resident = () => {
 
         {!residentData?.[4] ? (
           <CustomButton
+            className="btn"
             content="Add Queue"
             clicked={async () => {
               dispatch(addQueue({ uinfin, mobileNo }));
@@ -121,10 +122,10 @@ const Resident = () => {
         ></input>
       </div>
       <div>
-        <CustomButton content="Verify" clicked={buttonHandler}>
+        <CustomButton className="btn" content="Verify" clicked={buttonHandler}>
           Verify
         </CustomButton>
-        <CustomButton content="Logout" clicked={logoutHandler}>
+        <CustomButton className="btn" content="Logout" clicked={logoutHandler}>
           Logout
         </CustomButton>
       </div>

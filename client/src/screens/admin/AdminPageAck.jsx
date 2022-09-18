@@ -26,6 +26,7 @@ const AdminPageAck = () => {
     <div className={cx("admin-page-ack-container")}>
       <h2>Staff Creation Successful.</h2>
       <CustomButton
+        className="btn"
         content="New Staff Entry"
         clicked={completeRegisterHandler}
       ></CustomButton>

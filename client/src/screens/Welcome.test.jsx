@@ -12,6 +12,6 @@ describe("Render whole Welcome page", () => {
     expect(getByTestId("welcome-container")).toBeTruthy();
     expect(getByTestId("welcome-category-resident")).toBeTruthy();
     expect(getByTestId("img-logo-resident")).toBeTruthy();
-    expect(getAllByTestId("custom-btn")).toBeTruthy();
+    expect(getAllByTestId("custom-btn-resident")).toBeTruthy();
   });
 });

@@ -69,6 +69,7 @@ const Welcome = () => {
 
   return (
     <div data-testid="welcome-container" className={cx("container")}>
+      <div data-testid="text">{"hi"}</div>
       {renderResident()}
       {renderStaff()}
       {renderAdmin()}

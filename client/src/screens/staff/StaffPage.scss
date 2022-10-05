@@ -1,26 +1,19 @@
-.staff-page-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.description {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
-  .description {
-    text-align: center;
-    font-size: 18px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+.input-box {
+  margin-bottom: 25px;
+}
 
-  .input-box {
-    margin-bottom: 25px;
-  }
+.data-container {
+  text-align: center;
 
-  .data-container {
-    text-align: center;
-
-    .queue-data {
-      text-align: left;
-      margin-left: 30px;
-    }
+  .queue-data {
+    text-align: left;
+    margin-left: 30px;
   }
 }

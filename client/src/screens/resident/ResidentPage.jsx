@@ -9,6 +9,7 @@ import {
 import classNames from "classnames/bind";
 import styles from "./ResidentPage.scss";
 import CustomButton from "../../shared/CustomButton";
+import "../scss/GlobalStyles.scss";
 
 const ResidentPage = () => {
   const [logout, setLogout] = useState(false);
@@ -30,7 +31,7 @@ const ResidentPage = () => {
   }
 
   return (
-    <div className={cx("resident-page-container")}>
+    <div className={cx("container")}>
       <div>
         <div>
           <b>Full Name:</b> {residentData?.[0]}

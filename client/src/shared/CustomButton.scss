@@ -1,5 +1,6 @@
-.btn {
-  background-color: tomato;
+@import "../../src/screens/scss/colors";
+
+.basic {
   padding: 1rem 2rem;
   font-size: 18px;
   border: none;
@@ -7,38 +8,28 @@
   margin: 1rem;
   outline: none;
   border-radius: 20px;
+}
+
+.btn {
+  background-color: $reddish-tomato;
 }
 
 .resident-btn {
-  background-color: teal !important;
-  padding: 1rem 2rem;
-  font-size: 18px;
-  border: none;
-  color: #fff;
-  margin: 1rem;
-  outline: none;
-  border-radius: 20px;
+  background-color: $teal-steel;
 }
 
 .staff-btn {
-  background-color: #0a75ad !important;
-  padding: 1rem 2rem;
-  font-size: 18px;
-  border: none;
-  color: #fff;
-  margin: 1rem;
-  outline: none;
-  border-radius: 20px;
+  background-color: $sea-blue;
 }
 
 .default-color {
-  background-color: #0a75ad;
+  background-color: $sea-blue;
 }
 
 .submit-color {
-  background-color: teal;
+  background-color: $positive-green;
 }
 
 .logout-color {
-  background-color: tomato;
+  background-color: $out-red;
 }

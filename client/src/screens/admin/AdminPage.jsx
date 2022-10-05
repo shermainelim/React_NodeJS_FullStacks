@@ -11,6 +11,7 @@ import {
   useRegisterCreated,
 } from "../../redux/appSlice";
 import CustomButton from "../../shared/CustomButton";
+import "../scss/GlobalStyles.scss";
 
 const AdminPage = () => {
   const [username, setUsername] = useState("");
@@ -53,7 +54,7 @@ const AdminPage = () => {
   };
 
   return (
-    <div className={cx("admin-page-container")}>
+    <div className={cx("container")}>
       <div>Welcome to Admin Page ! {adminFullName}</div>
 
       <div className={cx("App")}>

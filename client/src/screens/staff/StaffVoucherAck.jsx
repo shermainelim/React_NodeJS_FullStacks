@@ -9,6 +9,7 @@ import {
 import CustomButton from "../../shared/CustomButton";
 import classNames from "classnames/bind";
 import styles from "./StaffVoucherAck.scss";
+import "../scss/GlobalStyles.scss";
 
 const StaffVoucherAck = () => {
   const [logoutVoucher, setLogoutVoucher] = useState(false);
@@ -30,7 +31,7 @@ const StaffVoucherAck = () => {
   };
 
   return (
-    <div className={cx("staff-vack-container")}>
+    <div className={cx("container")}>
       <h1>Voucher Issued</h1>
       <div>
         <b>Full Name:</b> {residentQueueData?.[0]}

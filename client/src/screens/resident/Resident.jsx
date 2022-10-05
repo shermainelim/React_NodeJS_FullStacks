@@ -12,6 +12,7 @@ import {
 import classNames from "classnames/bind";
 import styles from "./Resident.scss";
 import CustomButton from "../../shared/CustomButton";
+import "../scss/GlobalStyles.scss";
 
 const Resident = () => {
   const [uinfin, setUinfin] = useState("");
@@ -95,7 +96,7 @@ const Resident = () => {
   };
 
   return (
-    <div className={cx("resident-container")}>
+    <div className={cx("container")}>
       <h2>Resident</h2>
       <div className={cx("description")}>
         Enter your UFIN last 4 characters and mobile number to receive queue
@@ -122,10 +123,18 @@ const Resident = () => {
         ></input>
       </div>
       <div>
-        <CustomButton className="btn" content="Verify" clicked={buttonHandler}>
+        <CustomButton
+          className="submit-color"
+          content="Verify"
+          clicked={buttonHandler}
+        >
           Verify
         </CustomButton>
-        <CustomButton className="btn" content="Logout" clicked={logoutHandler}>
+        <CustomButton
+          className="logout-color "
+          content="Logout"
+          clicked={logoutHandler}
+        >
           Logout
         </CustomButton>
       </div>

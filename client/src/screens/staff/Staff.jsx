@@ -4,7 +4,7 @@ import Login from "../Login";
 
 import classNames from "classnames/bind";
 import styles from "./Staff.scss";
-
+import "../scss/GlobalStyles.scss";
 import { useIsLoggedInStaff } from "../../redux/appSlice";
 
 const Staff = () => {
@@ -15,7 +15,7 @@ const Staff = () => {
     return <Navigate to="/staffPage" />;
   }
   return (
-    <div className={cx("staff-container")}>
+    <div className={cx("container")}>
       <h2>Staff</h2>
 
       <div className={cx("login")}>

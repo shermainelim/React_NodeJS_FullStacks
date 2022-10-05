@@ -6,6 +6,7 @@ import residentLogo from "../assets/resident.png";
 import staffLogo from "../assets/staff.png";
 import adminLogo from "../assets/admin.png";
 import CustomButton from "../shared/CustomButton";
+import "../screens/scss/GlobalStyles.scss";
 
 const Welcome = () => {
   const navigate = useNavigate();
@@ -13,10 +14,7 @@ const Welcome = () => {
 
   const renderResident = () => {
     return (
-      <div
-        data-testid="welcome-category-resident"
-        className={cx("welcome-category")}
-      >
+      <div data-testid="welcome-category-resident" className={cx("category")}>
         <img
           data-testid="img-logo-resident"
           className={cx("logo")}
@@ -39,7 +37,7 @@ const Welcome = () => {
 
   const renderStaff = () => {
     return (
-      <div className={cx("welcome-category")}>
+      <div className={cx("category")}>
         <img className={cx("logo")} src={staffLogo} alt="Logo" />
         <CustomButton
           className="staff-btn"
@@ -56,7 +54,7 @@ const Welcome = () => {
 
   const renderAdmin = () => {
     return (
-      <div className={cx("welcome-category")}>
+      <div className={cx("category")}>
         <img className={cx("logo")} src={adminLogo} alt="Logo" />
         <CustomButton
           className="btn"
@@ -70,7 +68,7 @@ const Welcome = () => {
   };
 
   return (
-    <div data-testid="welcome-container" className={cx("welcome-container")}>
+    <div data-testid="welcome-container" className={cx("container")}>
       {renderResident()}
       {renderStaff()}
       {renderAdmin()}

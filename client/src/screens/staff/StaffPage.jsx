@@ -15,6 +15,7 @@ import {
 import classNames from "classnames/bind";
 import styles from "./StaffPage.scss";
 import CustomButton from "../../shared/CustomButton";
+import "../scss/GlobalStyles.scss";
 
 const StaffPage = () => {
   const [logout, setLogout] = useState(false);
@@ -123,7 +124,7 @@ const StaffPage = () => {
   };
 
   return (
-    <div className={cx("staff-page-container")}>
+    <div className={cx("container")}>
       <div className={cx("description")}>
         Welcome to Staff Page! {staffFullName}
       </div>

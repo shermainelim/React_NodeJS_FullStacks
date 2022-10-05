@@ -24,7 +24,7 @@ const CustomButton: React.FC<Props> = ({
   return (
     <button
       data-testid={`custom-btn-${testId}`}
-      className={cx(className)}
+      className={cx("basic", className)}
       onClick={clicked}
     >
       {content}

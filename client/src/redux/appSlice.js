@@ -344,6 +344,8 @@ const appSlice = createSlice({
   },
 });
 
+// each case under reducers becomes an action
+
 export const { logOutResident } = appSlice.actions;
 export const { logOutStaff } = appSlice.actions;
 export const { logOutAdmin } = appSlice.actions;
@@ -351,8 +353,6 @@ export const { completeVoucher } = appSlice.actions;
 export const { completeRegister } = appSlice.actions;
 
 export default appSlice.reducer;
-
-//selectors
 
 export const useIsLoggedInAdmin = () =>
   useSelector((state) => state.appState.isLoggedInAdmin);

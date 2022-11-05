@@ -14,7 +14,7 @@ import Register from "../screens/Register";
 import ResidentPage from "../screens/resident/ResidentPage";
 import StaffPage from "../screens/staff/StaffPage";
 import StaffVoucherAck from "../screens/staff/StaffVoucherAck";
-import QCube from "../assets/qcube.png";
+import ChocolateBar from "../assets/chocolatebar.png";
 
 const AppNavigator = () => {
   return (
@@ -26,13 +26,19 @@ const AppNavigator = () => {
           display: "flex",
         }}
       >
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <Link
+          to="/"
+          style={{
+            color: "purple",
+            textDecoration: "none",
+          }}
+        >
           <img
-            style={{ width: "40px", height: "40px" }}
-            src={QCube}
+            style={{ marginRight: "5px", width: "40px", height: "40px" }}
+            src={ChocolateBar}
             alt="Company Logo"
           ></img>
-          Welcome To QCube
+          Welcome To Chocolate Labs
         </Link>
       </nav>
 

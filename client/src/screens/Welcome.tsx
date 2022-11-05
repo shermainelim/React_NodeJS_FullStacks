@@ -24,7 +24,7 @@ const Welcome = () => {
         <CustomButton
           className="resident-btn"
           testId="resident"
-          content="Residents"
+          content="Customers"
           clicked={() => {
             navigate("/resident");
           }}
@@ -41,7 +41,7 @@ const Welcome = () => {
         <img className={cx("logo")} src={staffLogo} alt="Logo" />
         <CustomButton
           className="staff-btn"
-          content="General Staffs"
+          content="Chocolate Staffs"
           clicked={() => {
             navigate("/staff");
           }}
@@ -58,7 +58,7 @@ const Welcome = () => {
         <img className={cx("logo")} src={adminLogo} alt="Logo" />
         <CustomButton
           className="btn"
-          content="Admin"
+          content="Administrators"
           clicked={() => {
             navigate("/adminLogin");
           }}
@@ -69,7 +69,9 @@ const Welcome = () => {
 
   return (
     <div data-testid="welcome-container" className={cx("container")}>
-      <div data-testid="text">{"hi"}</div>
+      <div className={cx("text")} data-testid="text">
+        {"Collect a ticket and redeem a bar of chocolate today."}
+      </div>
       {renderResident()}
       {renderStaff()}
       {renderAdmin()}

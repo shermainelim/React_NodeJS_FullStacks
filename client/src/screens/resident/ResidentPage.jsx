@@ -40,10 +40,10 @@ const ResidentPage = () => {
           <b>Address:</b> {residentData?.[1]}
         </div>
         <div>
-          <b>UINFIN:</b> {residentData?.[2]}
+          <b>Loyalty Card No</b> {residentData?.[2]}
         </div>
         <div>
-          <b>Queue No:</b> {queueNumberCreated}
+          <b>Chocolate Ticket No:</b> {queueNumberCreated}
         </div>
       </div>
       <CustomButton

@@ -62,7 +62,7 @@ const Resident = () => {
         {!residentData?.[4] ? (
           <h3>
             Please check and confirm that the particulars are correct before
-            adding queue.
+            adding chocolate ticket.
           </h3>
         ) : (
           <h3>Queue exist.</h3>
@@ -75,17 +75,17 @@ const Resident = () => {
             <b>Address:</b> {residentData?.[1]}
           </div>
           <div>
-            <b>UINFIN:</b> {residentData?.[2]}
+            <b>Loyalty Card No:</b> {residentData?.[2]}
           </div>
           <div>
-            <b>Queue No:</b> {residentData?.[3]}
+            <b>Chocolate Ticket No:</b> {residentData?.[3]}
           </div>
         </div>
 
         {!residentData?.[4] ? (
           <CustomButton
-            className="btn"
-            content="Add Queue"
+            className="add-ticket-btn"
+            content="Add Chocolate Ticket"
             clicked={async () => {
               dispatch(addQueue({ uinfin, mobileNo }));
             }}
@@ -99,15 +99,15 @@ const Resident = () => {
     <div className={cx("container")}>
       <h2>Resident</h2>
       <div className={cx("description")}>
-        Enter your UFIN last 4 characters and mobile number to receive queue
-        number.
+        Enter your Loyalty Card No last 4 characters and mobile number to
+        receive queue number.
       </div>
       <div className={cx("input-box")}>
         <input
           type="text"
           required
           maxLength={9}
-          placeholder="UINFIN last 4 characters"
+          placeholder="Loyalty Card No last 4 characters"
           value={uinfin}
           onChange={uinfinHandler}
         ></input>

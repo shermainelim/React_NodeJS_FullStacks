@@ -115,7 +115,7 @@ app.post("/staffVerifyQueue", (req, res) => {
   const mobileNo = req.body.mobileNo;
 
   db.query(
-    "SELECT * FROM residents WHERE queueNo = ? AND ufinLastFourDigit = ? AND mobileNo = ?",
+    "SELECT * FROM residents WHERE queueNo = ? AND ufinLastFiveDigit = ? AND mobileNo = ?",
     [queueNo, uinfin, mobileNo],
     (err, result) => {
       if (err) {
@@ -153,7 +153,7 @@ app.post("/staffVerifyQueue", (req, res) => {
           message: "Successful",
         });
       } else {
-        res.send({ message: "Queue data does not exist" });
+        res.send({ message: "Ticket data does not exist" });
       }
     }
   );
@@ -165,7 +165,7 @@ app.post("/verifyResident", (req, res) => {
   const mobileNo = req.body.mobileNo;
 
   db.query(
-    "SELECT * FROM residents WHERE ufinLastFourDigit = ? AND mobileNo = ?",
+    "SELECT * FROM residents WHERE ufinLastFiveDigit = ? AND mobileNo = ?",
     [uinfin, mobileNo],
     (err, result) => {
       if (err) {
@@ -210,7 +210,7 @@ app.post("/issueVoucher", (req, res) => {
     `${year}-${month}-${date} ${hours}:${minutes}:${seconds}`.toString();
 
   db.query(
-    "UPDATE residents SET completed =? , processedByStaff=? , processedTimeStamp=? WHERE queueNo = ? AND ufinLastFourDigit = ? AND mobileNo = ?",
+    "UPDATE residents SET completed =? , processedByStaff=? , processedTimeStamp=? WHERE queueNo = ? AND ufinLastFiveDigit = ? AND mobileNo = ?",
     ["True", staffFullName, dateTimeStamp, queueNo, uinfin, mobileNo],
     (err, result) => {
       if (err) {
@@ -218,7 +218,7 @@ app.post("/issueVoucher", (req, res) => {
       }
 
       if (result) {
-        res.send({ data: "True", message: "Issue voucher completed." });
+        res.send({ data: "True", message: "Issue chocolate bar completed." });
       } else {
         res.send({ message: "An error has occured. Please try again." });
       }
@@ -234,7 +234,7 @@ app.post("/addQueue", (req, res) => {
   const mobileNo = req.body.mobileNo;
 
   db.query(
-    "UPDATE residents SET queueNo =? WHERE ufinLastFourDigit = ? AND mobileNo = ?",
+    "UPDATE residents SET queueNo =? WHERE ufinLastFiveDigit = ? AND mobileNo = ?",
     [newQueue, uinfin, mobileNo],
     (err, result) => {
       if (err) {
@@ -259,7 +259,7 @@ app.post("/api/sendemail", async (req, res) => {
     const send_to = email;
     const sent_from = process.env.EMAIL_USER;
     const reply_to = email;
-    const subject = "Thank You Message From ChocolateLabs";
+    const subject = "Thank You Message From Fin ChocolateLabs";
     const message = `
         <h3>Hello Customer, ${residentName}</h3>
         <p>Thank for redeeming from FIN Chocolate Labs. </p>

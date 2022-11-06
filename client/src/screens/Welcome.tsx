@@ -57,7 +57,7 @@ const Welcome = () => {
       <div className={cx("category")}>
         <img className={cx("logo")} src={adminLogo} alt="Logo" />
         <CustomButton
-          className="btn"
+          className="admin-btn"
           content="Administrators"
           clicked={() => {
             navigate("/adminLogin");

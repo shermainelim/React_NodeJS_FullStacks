@@ -65,7 +65,7 @@ const Resident = () => {
             adding chocolate ticket.
           </h3>
         ) : (
-          <h3>Queue exist.</h3>
+          <h3>Chocolate ticket exist.</h3>
         )}
         <div className={cx("queue-data")}>
           <div>
@@ -100,7 +100,7 @@ const Resident = () => {
       <h2>Customer or Resident</h2>
       <div className={cx("description")}>
         Enter your Loyalty Fin Card No last 5 characters and mobile number to
-        receive queue number.
+        receive chocolate ticket.
       </div>
       <div className={cx("input-box")}>
         <input

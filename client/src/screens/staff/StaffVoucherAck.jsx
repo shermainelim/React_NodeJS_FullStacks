@@ -32,7 +32,7 @@ const StaffVoucherAck = () => {
 
   return (
     <div className={cx("container")}>
-      <h1>Voucher Issued</h1>
+      <h1>Chocolate Bar Issued</h1>
       <div>
         <b>Full Name:</b> {residentQueueData?.[0]}
       </div>
@@ -40,11 +40,11 @@ const StaffVoucherAck = () => {
         <b>Address:</b> {residentQueueData?.[1]}
       </div>
       <div>
-        <b>UINFIN: </b>
+        <b>Loyalty Card FIN No: </b>
         {residentQueueData?.[2]}
       </div>
       <div>
-        <b>Queue No:</b> {residentQueueData?.[3]}
+        <b>Chocolate Ticket No:</b> {residentQueueData?.[3]}
       </div>
       <div>
         <b>Completed:</b> {completedIndicator}

@@ -51,6 +51,8 @@ const StaffPage = () => {
   }
 
   const renderQueueDetails = () => {
+    console.log("residenntdata4", residentQueueData?.[4]);
+    console.log("resudebt5", residentQueueData?.[5]);
     return (
       <div className={cx("data-container")}>
         {!residentQueueData?.[4] ? <h1>Data:</h1> : <h1>Data found</h1>}
@@ -62,19 +64,19 @@ const StaffPage = () => {
           {residentQueueData?.[1]}
         </div>
         <div>
-          <b>UINFIN:</b> {residentQueueData?.[2]}
+          <b>Loyalty Card FIN No</b> {residentQueueData?.[2]}
         </div>
         <div>
-          <b>Queue No:</b> {residentQueueData?.[3]}
+          <b>Chocolate Ticket No:</b> {residentQueueData?.[3]}
         </div>
         <div>
           <b>Completed:</b> {residentQueueData?.[5]}
         </div>
 
-        {!residentQueueData?.[4] ? null : (
+        {!residentQueueData?.[4] || residentQueueData?.[5] ? null : (
           <CustomButton
-            className="btn"
-            content="Issue Voucher"
+            className="chocolate-bar"
+            content="Issue Chocolate Bar"
             clicked={voucherHandler}
           ></CustomButton>
         )}
@@ -133,7 +135,7 @@ const StaffPage = () => {
         <input
           type="text"
           required
-          placeholder="Queue Number"
+          placeholder="Chocolate Ticket No"
           value={queueNo}
           onChange={queueNoHandler}
         ></input>
@@ -143,7 +145,7 @@ const StaffPage = () => {
           type="text"
           required
           maxLength={9}
-          placeholder="UINFIN last four digit"
+          placeholder="Loyalty Fin Card No last 5 characters"
           value={uinfin}
           onChange={uinfinHandler}
         ></input>
@@ -157,18 +159,23 @@ const StaffPage = () => {
           value={mobileNo}
           onChange={mobileNoHandler}
         ></input>
+        _
+      </div>
+      <div>
+        <CustomButton
+          className="login-verify-color"
+          content="Verify Chocolate Ticket"
+          clicked={buttonHandler}
+        ></CustomButton>
+      </div>
+      <div>
+        <CustomButton
+          className="staff-logout"
+          content="Logout"
+          clicked={logoutHandler}
+        ></CustomButton>
       </div>
 
-      <CustomButton
-        className="btn"
-        content="Check Queue Number and Resident"
-        clicked={buttonHandler}
-      ></CustomButton>
-      <CustomButton
-        className="btn"
-        content="Logout"
-        clicked={logoutHandler}
-      ></CustomButton>
       {isStaffChecked && renderQueueDetails()}
     </div>
   );

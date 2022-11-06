@@ -1,4 +1,4 @@
-# React_NodeJS_MySQL Chocolate Ticket System -2022
+# React_NodeJS_MySQL Chocolate Ticket System 2022
 
 # A Chocolate Ticketing System where customers can redeem chocolate from staff.
 
@@ -14,6 +14,7 @@
 https://chocolatelabs.netlify.app/
 
 # Youtube Link to Present App and Testing
+https://youtu.be/hbvS_lvyVM8
 
 # Available Testing Credentials
 

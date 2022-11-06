@@ -34,7 +34,7 @@ const ResidentPage = () => {
     };
 
     const response = await axios.post(
-      "http://localhost:3001/api/sendemail",
+      "https://mysql-deploy-heroku-2.herokuapp.com/api/sendemail",
       data
     );
     console.log(response.data);

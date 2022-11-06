@@ -10,8 +10,26 @@ import classNames from "classnames/bind";
 import styles from "./ResidentPage.scss";
 import CustomButton from "../../shared/CustomButton";
 import "../scss/GlobalStyles.scss";
+import axios from "../../utils/axios";
 
 const ResidentPage = () => {
+  const [email, setEmail] = useState("");
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      email,
+    };
+
+    const response = await axios.post(
+      "http://localhost:3001/api/sendemail",
+      data
+    );
+    console.log(response.data);
+    alert("Email Sent!");
+  };
+
   const [logout, setLogout] = useState(false);
 
   const dispatch = useDispatch();
@@ -40,14 +58,31 @@ const ResidentPage = () => {
           <b>Address:</b> {residentData?.[1]}
         </div>
         <div>
-          <b>Loyalty Card No</b> {residentData?.[2]}
+          <b>Loyalty Card FIN No</b> {residentData?.[2]}
         </div>
         <div>
           <b>Chocolate Ticket No:</b> {queueNumberCreated}
         </div>
+
+        <div className={cx("container")}>
+          <input
+            type="email"
+            placeholder="Email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <CustomButton
+            className="submit-color"
+            content="Email Chocolate Ticket"
+            clicked={sendEmail}
+          ></CustomButton>
+        </div>
       </div>
+
       <CustomButton
-        className="btn"
+        className="logout-color "
         content="Logout"
         clicked={logoutHandler}
       ></CustomButton>

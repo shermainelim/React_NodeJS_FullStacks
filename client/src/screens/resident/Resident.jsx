@@ -75,7 +75,7 @@ const Resident = () => {
             <b>Address:</b> {residentData?.[1]}
           </div>
           <div>
-            <b>Loyalty Card No:</b> {residentData?.[2]}
+            <b>Loyalty Fin Card No:</b> {residentData?.[2]}
           </div>
           <div>
             <b>Chocolate Ticket No:</b> {residentData?.[3]}
@@ -97,9 +97,9 @@ const Resident = () => {
 
   return (
     <div className={cx("container")}>
-      <h2>Resident</h2>
+      <h2>Customer or Resident</h2>
       <div className={cx("description")}>
-        Enter your Loyalty Card No last 4 characters and mobile number to
+        Enter your Loyalty Fin Card No last 5 characters and mobile number to
         receive queue number.
       </div>
       <div className={cx("input-box")}>
@@ -107,7 +107,7 @@ const Resident = () => {
           type="text"
           required
           maxLength={9}
-          placeholder="Loyalty Card No last 4 characters"
+          placeholder="Loyalty Fin Card No last 5 characters"
           value={uinfin}
           onChange={uinfinHandler}
         ></input>
@@ -122,7 +122,7 @@ const Resident = () => {
           onChange={mobileNoHandler}
         ></input>
       </div>
-      <div>
+      <div className={cx("verifiy-box")}>
         <CustomButton
           className="submit-color"
           content="Verify"
@@ -130,6 +130,8 @@ const Resident = () => {
         >
           Verify
         </CustomButton>
+      </div>
+      <div className={cx("logout-box")}>
         <CustomButton
           className="logout-color "
           content="Logout"

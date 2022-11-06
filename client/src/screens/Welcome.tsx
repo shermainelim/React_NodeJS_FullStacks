@@ -24,7 +24,7 @@ const Welcome = () => {
         <CustomButton
           className="resident-btn"
           testId="resident"
-          content="Customers"
+          content="Customers / Residents"
           clicked={() => {
             navigate("/resident");
           }}

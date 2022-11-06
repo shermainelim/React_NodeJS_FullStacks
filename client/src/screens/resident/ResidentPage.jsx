@@ -15,11 +15,22 @@ import axios from "../../utils/axios";
 const ResidentPage = () => {
   const [email, setEmail] = useState("");
 
+  const [logout, setLogout] = useState(false);
+
+  const dispatch = useDispatch();
+  const cx = classNames.bind(styles);
+
+  const residentData = useVerifyResident();
+  const queueNumberCreated = useQueue();
+  const residentName = residentData?.[0];
+
   const sendEmail = async (e) => {
     e.preventDefault();
 
     const data = {
       email,
+      residentName,
+      queueNumberCreated,
     };
 
     const response = await axios.post(
@@ -29,14 +40,6 @@ const ResidentPage = () => {
     console.log(response.data);
     alert("Email Sent!");
   };
-
-  const [logout, setLogout] = useState(false);
-
-  const dispatch = useDispatch();
-  const cx = classNames.bind(styles);
-
-  const residentData = useVerifyResident();
-  const queueNumberCreated = useQueue();
 
   const logoutHandler = async () => {
     dispatch(logOutResident());

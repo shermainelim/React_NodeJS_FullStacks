@@ -250,17 +250,22 @@ app.post("/addQueue", (req, res) => {
 });
 
 app.post("/api/sendemail", async (req, res) => {
-  const { email } = req.body;
-
+  const email = req.body.email;
+  const residentName = req.body.residentName;
+  const queueNo = req.body.queueNumberCreated;
+  console.log("residentname", residentName);
+  console.log("queueno", queueNo);
   try {
     const send_to = email;
     const sent_from = process.env.EMAIL_USER;
     const reply_to = email;
     const subject = "Thank You Message From ChocolateLabs";
     const message = `
-        <h3>Hello Customer</h3>
-        <p>Thank for redeeming your chocolate ticket</p>
-        <p>Enjoy</p>
+        <h3>Hello Customer, ${residentName}</h3>
+        <p>Thank for redeeming from FIN Chocolate Labs. </p>
+        <p>Your Chocolate Ticket No is ${queueNo}</p>
+        <p>Enjoy,</p>
+        <p>Fin Chocolate Labs</p>
     `;
 
     await sendEmail(subject, message, send_to, sent_from, reply_to);

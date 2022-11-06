@@ -2,9 +2,9 @@ const mysql = require("mysql");
 
 const db = mysql.createConnection({
   host: "us-cdbr-east-06.cleardb.net",
-  user: "bdfbfac26378bf",
-  password: "9afccc10",
-  database: "heroku_bbb83f01af87c3b",
+  user: "bc99e83281124f",
+  password: "498352de",
+  database: "heroku_e3d09080d56a833",
 });
 
 module.exports = db;

@@ -16,10 +16,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 
 const db = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "password",
-  database: "loginsystem",
+  host: "us-cdbr-east-06.cleardb.net",
+  user: "bc99e83281124f",
+  password: "498352de",
+  database: "heroku_e3d09080d56a833",
 });
 
 //register new staff
@@ -275,6 +275,6 @@ app.post("/api/sendemail", async (req, res) => {
   }
 });
 
-app.listen(3001, () => {
-  console.log("running on port 3001");
+app.listen(process.env.PORT || 3001, () => {
+  console.log("Server running on port");
 });
